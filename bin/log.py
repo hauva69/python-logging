@@ -4,6 +4,8 @@
 
 import logging
 
+import mylib
+
 def _very_simple():
     logging.warning('Watch out!')
     logging.info('I told you so.')
@@ -25,6 +27,7 @@ def _clear_log_config():
 def _main():
     _very_simple()
     _log2file()
+    mylib.hello()
 
 if __name__ == '__main__':
     _main()
