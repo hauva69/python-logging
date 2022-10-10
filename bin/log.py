@@ -20,6 +20,11 @@ def _log2file():
     logging.warning('this is a warning')
     logging.error('and some non ASCII characters: äöÅü蟻')
 
+def _formatted_log():
+    _clear_log_config()
+    logging.basicConfig(format='%(asctime)s %(message)s')
+    logging.warning('is when the event was logged')
+
 def _clear_log_config():
     for handler in logging.root.handlers[:]:
         logging.root.removeHandler(handler)
@@ -28,6 +33,7 @@ def _main():
     _very_simple()
     _log2file()
     mylib.hello()
+    _formatted_log()
 
 if __name__ == '__main__':
     _main()
