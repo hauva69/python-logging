@@ -22,7 +22,7 @@ def _log2file():
 
 def _formatted_log():
     _clear_log_config()
-    logging.basicConfig(format='%(asctime)s %(message)s')
+    logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s')
     logging.warning('is when the event was logged')
 
 def _clear_log_config():
